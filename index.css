@@ -115,8 +115,21 @@ body {
 
 #section-blurb p {
   overflow: hidden;
-  border-left: 0.15em solid var(--dark-purple);
-  /* white-space: nowrap; */
-  padding-left: 10px;
   font-size: larger;
+  overflow: hidden;
+  border-left: 0.15em solid var(--dark-purple);
+  padding-left: 10px;
+}
+
+.change-color {
+  animation: colorChange 3s infinite;
+}
+
+@keyframes colorChange {
+  0% {
+    color: var(--dark-purple);
+  }
+  50% {
+    color: var(--light-purple);
+  }
 }
