@@ -3,6 +3,7 @@ function copyEmail() {
 }
 
 function toggleTheme() {
+  new Audio("assets/toggle_sound.mp3").play();
   if (document.body.classList.contains('dark-mode')) {
     document.getElementById('light-dark-toggle').src="assets/sun.svg";
   } else {
