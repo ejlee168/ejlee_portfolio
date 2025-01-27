@@ -1,9 +1,11 @@
+toggle_sound = new Audio("assets/toggle_sound.mp3");
+
 function copyEmail() {
   const popup = document.getElementById('copied-popup');
 }
 
 function toggleTheme() {
-  new Audio("assets/toggle_sound.mp3").play();
+  toggle_sound.play();
   if (document.body.classList.contains('dark-mode')) {
     document.getElementById('light-dark-toggle').src="assets/sun.svg";
   } else {
