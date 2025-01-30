@@ -1,5 +1,17 @@
+.logo-icon {
+  width: clamp(20px, 100%, 40px);
+  max-width: 40px;
+  height: auto;
+}
+
+#light-dark-toggle {
+  border: none;
+  background-color: transparent;
+}
+
 /* navbar container */
 #nav-bar {
+  position: fixed;
   display: flex;
   justify-content: space-between;
   /* overflow: hidden; */
@@ -42,7 +54,7 @@
 }
 
 #nav-links-container a:visited {
-  color: black;
+  color: var(--text-colour);
 }
 
 #nav-links-container a:hover {
