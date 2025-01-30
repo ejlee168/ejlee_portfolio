@@ -8,7 +8,7 @@
 
 .dark-mode {
   --bg-colour: #615b5b;
-  --nav-colour:  rgb(120, 120, 120);
+  --nav-colour: rgb(120, 120, 120);
   --text-colour: white;
   --light-purple: rgb(122, 92, 231);
   --dark-purple: rgb(200, 191, 231);
@@ -16,17 +16,15 @@
 
 html,
 body {
+  overflow-y: hidden; /* hide vert scrollbar */
   background-color: var(--bg-colour);
   color: var(--text-colour);
-  /* cursor: crosshair; */
   height: 100%;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   transition: background-color 0.1s;
 }
-
-
 
 .logo-icon {
   width: clamp(20px, 100%, 40px);
@@ -45,53 +43,6 @@ body {
   height: auto;
   clip-path: circle();
   object-fit: contain;
-}
-
-/* navbar container */
-#nav-bar {
-  display: flex;
-  justify-content: space-between;
-  overflow: hidden;
-  background-color:  var(--nav-colour);
-  padding: 0;
-  margin: 0;
-  height: 60px;
-}
-
-/* Icons top left */
-#nav-icons-container {
-  display: flex;
-  align-items: center;
-  padding-left: 10px;
-}
-
-/* Icons top left */
-#nav-icons-container a {
-  display: flex;
-  align-items: center;
-  padding: min(10px, 1.5vw);
-}
-
-/* Links top right */
-#nav-links-container {
-  display: flex;
-  padding-right: 5px;
-}
-
-/* Links top right */
-#nav-links-container a {
-  display: flex;
-  align-items: center;
-  padding-left: 20px;
-  padding-right: 20px;
-  font-weight: bold;
-  font-size: larger;
-}
-
-#nav-links-container a:hover {
-  color: rgb(200, 191, 231);
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 #section-about {
@@ -140,5 +91,33 @@ body {
   }
   100% {
     color: var(--light-purple);
+  }
+}
+
+#titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#title-text path {
+  fill: transparent;
+  stroke: rgb(0, 0, 0);
+  stroke-width: 0.1;
+  stroke-dasharray: 105;
+  animation: titleTextAnimation 3s ease-in-out 1 forwards;
+}
+
+@keyframes titleTextAnimation {
+  0% {
+    stroke-dashoffset: 105;
+  }
+  60% {
+    fill: transparent;
+  }
+  100% {
+    fill: black;
+    stroke-dashoffset: 0;
   }
 }

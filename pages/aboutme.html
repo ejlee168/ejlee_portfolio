@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/ejlee_website/index.css" />
+    <link rel="stylesheet" href="/ejlee_website/nav/nav.css" />
+    <title>Ethan Lee Portfolio</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/ejlee_website/assets/favicon.ico"
+    />
+    <script src="/ejlee_website/nav/nav.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="nav-placeholder"></div>
+    <script>
+      $.get('/ejlee_website/nav/nav.html', function (data) {
+        $('#nav-placeholder').replaceWith(data);
+      });
+    </script>
+    <section id="section-about">
+      <section id="section-blurb">
+        <h2>About Me</h2>
+        <p>
+          Hi there! I'm currently a 1st year medical student at the
+          <strong class="change-color">University of Queensland</strong>, having
+          previously graduated from a
+          <strong class="change-color">Bachelor of Science</strong> majoring in
+          <strong class="change-color">Computer Science</strong> (2024) with a
+          <strong class="change-color">GPA of 6.8</strong>. I graduated high
+          school with a
+          <strong class="change-color"> 99.95 ATAR </strong> (2021).
+          <br /><br />I am also a really big
+          <strong class="change-color">foodie</strong> and love to go
+          <strong class="change-color">bouldering</strong> in my free time.
+        </p>
+      </section>
+      <section id="section-profile-preview">
+        <img id="headshot" src="../assets/headshot.jpg" alt="ProfilePicture" />
+        <h1>Ethan James Lee</h1>
+      </section>
+    </section>
+  </body>
+</html>
