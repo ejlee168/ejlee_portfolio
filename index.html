@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <base href="{{site.baseurl}}" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/ejlee_website/index.css" />
-    <link rel="stylesheet" href="/ejlee_website/nav/nav.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="nav/nav.css" />
     <title>Ethan Lee Portfolio</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="/ejlee_website/assets/favicon.ico"
-    />
-    <script src="/ejlee_website/script.js"></script>
-    <script src="/ejlee_website/nav/nav.js"></script>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <script src="script.js"></script>
+    <script src="nav/nav.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <div id="nav-placeholder"></div>
-    <!-- <script>
-      $.get('/ejlee_website/nav/nav.html', function (data) {
+    <script>
+      $.get('nav/nav.html', function (data) {
         $('#nav-placeholder').replaceWith(data);
       });
-    </script> -->
+    </script>
     <div>
       <div id="backgroundContainer">
         <div class="bg-mountains" id="bg-mountainA">

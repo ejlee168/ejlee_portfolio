@@ -19,9 +19,12 @@
   --dark-purple: rgb(200, 191, 231);
 }
 
-html,
+/* ::-webkit-scrollbar {
+  width: 0px;
+} */
+
 body {
-  overflow: hidden; /* hide scrollbars */
+  overflow: hidden;
   background-color: var(--bg-colour);
   color: var(--text-colour);
   height: 100vh;
@@ -39,16 +42,17 @@ body {
 .bg-mountains {
   width: 100%;
   position: absolute;
-  /* animation: 3s ease-in-out 1 forwards; */
+  animation: blur 3s ease-in-out 1 forwards;
 }
 
-/* @keyframes feGaussianBlur {
+@keyframes blur {
   0% {
-
+    filter: blur(0px);
   }
-} */
+}
 
 #bg-mountainA {
+  filter: blur(3px);
   transform: scale(1.1);
   bottom: calc(var(--mountain-pos) + 2vh);
   z-index: 1;
@@ -59,6 +63,7 @@ body {
 }
 
 #bg-mountainB {
+  filter: blur(2px);
   transform: scale(1.1);
   bottom: calc(var(--mountain-pos) - 15vh);
   z-index: 2;
@@ -69,6 +74,7 @@ body {
 }
 
 #bg-mountainC {
+  filter: blur(1px);
   transform: scale(1.1);
   bottom: calc(var(--mountain-pos) - 13vh);
   z-index: 3;
@@ -93,7 +99,7 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 5;
-  height: 100vh;
+  height: 80vh;
 }
 
 #title-text path {
