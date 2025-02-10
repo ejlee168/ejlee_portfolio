@@ -38,9 +38,16 @@ body {
   transition: background-color 0.1s;
 }
 
+.page-container {
+  height: 100vh;
+}
+
 #backgroundContainer {
   overflow: hidden;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .bg-mountains {
@@ -107,8 +114,12 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 5;
-  height: 80vh;
-  bottom: 3vh;
+  height: 100%;
+}
+
+#titleContainer svg {
+  position: fixed;
+  bottom: 45vh;
 }
 
 #title-text path {

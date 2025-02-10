@@ -18,7 +18,7 @@
   background-color: var(--nav-colour);
   padding: 0;
   margin: 0;
-  /* height: 60px; */
+  height: 60px;
   width: 100%;
 }
 
@@ -27,6 +27,10 @@
   display: flex;
   align-items: center;
   padding-left: 10px;
+}
+
+#nav-icons-container svg {
+  width: 40px;
 }
 
 /* Icons top left */
@@ -51,14 +55,11 @@
   font-weight: bold;
   font-size: larger;
   text-decoration: none;
+  color: var(--text-colour);
+  /* color: red; */
 }
 
-#nav-links-container a:visited {
-  color: var(--text-colour);
-}
 
 #nav-links-container a:hover {
   color: rgb(200, 191, 231);
-  padding-left: 20px;
-  padding-right: 20px;
 }
